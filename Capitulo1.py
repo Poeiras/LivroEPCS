@@ -8,12 +8,14 @@ colunas = [
     'Abreviação'
 ]
 dados.columns = colunas
+
 # Exercício 1
 media = dados['População'].mean()
 mediana = dados['População'].median()
 media_aparada = stats.trim_mean(dados['População'], 0.1)
 desvio_padrao = dados['População'].std()
 amplitude_interquartil = stats.iqr(dados['População'])
+
 # Respostas
 print('Repostas:')
 print('Média: ' + '%0.0f' % media)
