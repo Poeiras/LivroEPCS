@@ -12,11 +12,14 @@ dados.columns = colunas
 media = dados['População'].mean()
 mediana = dados['População'].median()
 media_aparada = stats.trim_mean(dados['População'], 0.1)
+moda = dados['População'].mode()
 desvio_padrao = dados['População'].std()
 amplitude_interquartil = stats.iqr(dados['População'])
+
 # Respostas
 print('Repostas:')
 print('Média: ' + '%0.0f' % media)
 print('Media aparada: ' + '%0.0f' % media_aparada)
 print('Mediana: ' + '%0.0f' % mediana)
+print('Moda: ' + '%0.0f' % moda)
 print('Amplitude interquartil: ' + '%0.0f' % amplitude_interquartil)
